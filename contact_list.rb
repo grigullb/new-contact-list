@@ -44,6 +44,7 @@ class ContactList
 			found.each do |contact|
 	  		puts "#{contact.id}: #{contact.name} (#{contact.email})"
 	  	end
+	  	puts "#{found.length} records found"
 		end
 
 		def update(id)
@@ -54,6 +55,7 @@ class ContactList
 	  	contact.name = new_name
 	  	print "Email Address: "
 	  	new_email= STDIN.gets.chomp
+	  	contact.email = new_email
 	  	contact.save
 		end
 
